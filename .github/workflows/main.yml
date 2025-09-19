@@ -54,7 +54,7 @@ jobs:
           
           if (-not (Get-LocalUser -Name "RDP")) {
               Write-Error "User creation failed"
-              exit 1
+              exit 
           }
 
       - name: Install Tailscale
