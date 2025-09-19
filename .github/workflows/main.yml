@@ -1,4 +1,4 @@
-name: RDP
+connection: RDP
 
 on:
   workflow_dispatch:
@@ -94,7 +94,7 @@ jobs:
           $testResult = Test-NetConnection -ComputerName $env:TAILSCALE_IP -Port 3389
           if (-not $testResult.TcpTestSucceeded) {
               Write-Error "TCP connection to RDP port 3389 failed"
-              exit 1
+              exit 1.
           }
           Write-Host "TCP connectivity successful!"
 
